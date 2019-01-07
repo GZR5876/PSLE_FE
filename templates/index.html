@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Score Predictor Test Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href = "{{ url_for('static', filename = 'images/icons/favicon.ico') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='vendor/bootstrap/css/bootstrap.min.css') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='vendor/animate/animate.css') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='/vendor/css-hamburgers/hamburgers.min.css') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='vendor/animsition/css/animsition.min.css') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='vendor/select2/select2.min.css') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='vendor/daterangepicker/daterangepicker.css') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='css/util.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='css/main.css') }}"/>
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action="/demo_result">
+				<span class="contact100-form-title">
+					Input Your Score!
+				</span>
+
+				<div class="wrap-input100 validate-input" data-validate="Score is required">
+					<span class="label-input100">Math</span>
+					<input class="input100" type="text" name="math" placeholder="Enter Math Score" pattern="[0-9]{2}" title="2 digit score">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Score is required">
+					<span class="label-input100">Science</span>
+					<input class="input100" type="text" name="science" placeholder="Enter Science Score" pattern="[0-9]{2}" title="2 digit score" required="required">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Score is required">
+					<span class="label-input100">English</span>
+					<input class="input100" type="text" name="english" placeholder="Enter English Score" pattern="[0-9]{2}" title="2 digit score" required="required">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Score is required">
+					<span class="label-input100">Mother Tongue</span>
+					<input class="input100" type="text" name="MT" placeholder="Enter MT Score" pattern="[0-9]{2}" title="2 digit score" required="required">
+					<span class="focus-input100"></span>
+				</div>
+                <div class="wrap-input100 input100-select">
+					<span class="label-input100">Grade</span>
+					<div>
+						<select class="selection-2" name="term">
+							<option>Choose Your Term</option>
+							<option>SA1</option>
+							<option>SA2</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Postal Code is required">
+					<span class="label-input100">Postal Code</span>
+					<input class="input100" type="text" name="pc" placeholder="Enter Postal Code" pattern="[0-9]{6}" title="6 digit Postal Code" required="required">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<span class="label-input100">Email</span>
+					<input class="input100" type="text" name="email" placeholder="Enter your email addess" required="required">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">School Name</span>
+					<div>
+						<select class="selection-2" name="school">
+							<option>Choose Your School</option>
+							<option>NANYANG PRIMARY SCHOOL</option>
+							<option>AI TONG SCHOOL</option>
+							<option>KONG HWA SCHOOL</option>
+							<option>HOLY INNOCENTS PRIMARY SCHOOL</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Grade</span>
+					<div>
+						<select class="selection-2" name="grade">
+							<option>Choose Your Grade</option>
+							<option>6</option>
+							<option>5</option>
+							<option>4</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Grade</span>
+					<div>
+						<select class="selection-2" name="gender">
+							<option>Choose Your Gender</option>
+							<option>Girl</option>
+							<option>Boy</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn">
+							<span>
+								Submit
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename ='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename ='vendor/animsition/js/animsition.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename ='vendor/bootstrap/js/popper.js') }}"></script>
+	<script src="{{ url_for('static', filename ='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename ='vendor/select2/select2.min.js') }}"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename ='vendor/daterangepicker/moment.min.js')}}"></script>
+	<script src="{{ url_for('static', filename ='vendor/daterangepicker/daterangepicker.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename ='vendor/countdowntime/countdowntime.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename ='js/main.js')}}"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="{{ url_for('static', filename ='https://www.googletagmanager.com/gtag/js?id=UA-23581568-13')}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
